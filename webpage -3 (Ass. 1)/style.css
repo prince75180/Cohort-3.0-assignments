@@ -1,0 +1,442 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #050505;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+
+  background:
+    radial-gradient(circle at top,
+      rgba(255, 140, 0, 0.15),
+      transparent 40%),
+    #050505;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 50px 0;
+
+  animation: fadeDown 1s ease;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 120px;
+  height: 3px;
+  background: rgb(255, 140, 0);
+  margin: auto;
+
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 140, 0, 0.3);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 30px rgba(255, 140, 0, 0.08);
+
+  transition: 0.4s ease;
+
+  animation: cardFade 1s ease;
+}
+
+.active-card {
+  border: 1px solid rgb(255, 140, 0);
+
+  box-shadow:
+    0 0 40px rgba(255, 140, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  box-shadow:
+    0 0 50px rgba(255, 140, 0, 0.25);
+}
+
+.card-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgb(255, 140, 0);
+
+  background: rgba(255, 140, 0, 0.08);
+
+  color: rgb(255, 140, 0);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.card-tag:hover {
+  background: rgb(255, 140, 0);
+  color: black;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: contain;
+
+  padding: 30px;
+
+  transition: 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.card-content {
+  text-align: center;
+  padding: 0 20px 30px;
+}
+
+.card-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+}
+
+.card-content h3 {
+  margin-top: 20px;
+
+  color: rgb(255, 140, 0);
+
+  font-family: "Raleway", sans-serif;
+
+  font-size: 28px;
+}
+
+.line {
+  width: 70px;
+  height: 2px;
+
+  background: rgb(255, 140, 0);
+
+  margin: 20px auto;
+}
+
+/* SPECIAL SECTION */
+
+.special {
+  position: relative;
+
+  margin-top: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 140, 0, 0.15);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  padding: 40px;
+
+  box-shadow:
+    0 0 30px rgba(255, 140, 0, 0.08);
+
+  animation: fadeUp 1s ease;
+}
+
+.left-image {
+  width: 35%;
+}
+
+.left-image img {
+  width: 100%;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.right-content {
+  width: 45%;
+  margin-left: 20px;
+}
+
+.right-content h2 {
+  color: rgb(255, 140, 0);
+
+  letter-spacing: 3px;
+
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+
+.right-content h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.right-content p {
+  font-family: "Raleway", sans-serif;
+
+  color: #ccc;
+
+  line-height: 1.8;
+
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  margin-top: 20px;
+
+  padding: 15px 30px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgb(255, 140, 0);
+
+  background: transparent;
+
+  color: rgb(255, 140, 0);
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.explore-btn:hover {
+  background: rgb(255, 140, 0);
+  color: black;
+
+  transform: translateY(-5px);
+}
+
+.right-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  opacity: 0.08;
+}
+
+.right-image img {
+  width: 300px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 60px;
+
+  padding: 30px 0;
+
+  border-top: 1px solid rgba(255, 140, 0, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-family: "Raleway", sans-serif;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+
+  list-style: none;
+
+  font-family: "Raleway", sans-serif;
+}
+
+footer ul li {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer ul li:hover {
+  color: rgb(255, 140, 0);
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgb(255, 140, 0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgb(255, 140, 0);
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.icon:hover {
+  background: rgb(255, 140, 0);
+  color: black;
+
+  transform: translateY(-5px);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .special {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-image,
+  .right-content {
+    width: 100%;
+  }
+
+  .right-content h1 {
+    font-size: 38px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
