@@ -1,0 +1,392 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body{
+  background: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main{
+  display: grid;
+  width: 90%;
+  height: 90vh;
+  gap: 14px;
+  grid-template-columns: 19% 19% 17% 17% 18%;
+  grid-template-rows: 16% 16% 16% 16% 30%;
+
+  grid-template-areas:
+  
+  "left-top left-top column3-top column4-top right-top"
+  "left-top left-top column3-top column4-top right-middle1"
+  "left-middle column2-middle column3-middle column3-middle right-middle1"
+  "left-middle column2-middle column3-middle column3-middle right-middle2"
+  "left-bottom left-bottom left-bottom right-bottom right-bottom";
+}
+
+/* COMMON CARD */
+
+.left-top,
+.left-middle,
+.left-bottom,
+.column2-middle,
+.column3-top,
+.column3-middle,
+.column4-top,
+.right-top,
+.right-middle1,
+.right-middle2,
+.right-bottom{
+  background: #111111;
+  border: 1px solid #242424;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LEFT TOP */
+
+.left-top{
+  grid-area: left-top;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-top-upper{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.left-top-upper img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.upper-content h1{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.upper-content p{
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.left-top-bottom h1{
+  color: white;
+  font-size: 35px;
+  line-height: 1.15;
+  width: 80%;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.left-top-bottom p{
+  color: #7f7f7f;
+  width: 85%;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* LEFT MIDDLE */
+
+.left-middle{
+  grid-area: left-middle;
+}
+
+.left-middle-bg{
+  width: 100%;
+  height: 100%;
+}
+
+.left-middle-bg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  object-fit: cover;
+}
+
+/* LEFT BOTTOM */
+
+.left-bottom{
+  grid-area: left-bottom;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-bottom-left{
+  width: 70%;
+}
+
+.left-bottom-left h1{
+  color: white;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.left-bottom-left p{
+  color: #7f7f7f;
+  line-height: 1.8;
+  font-size: 14px;
+  width: 85%;
+}
+
+.left-bottom-right{
+  width: 95px;
+  height: 95px;
+  border: 1px solid #2c2c2c;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.left-bottom-right img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* COLUMN2 MIDDLE */
+
+.column2-middle{
+  grid-area: column2-middle;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.column2-middle-main p{
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.column2-middle-main h2{
+  color: white;
+  font-size: 28px;
+}
+
+.row-1, .row-2{
+  display: flex;
+  gap: 14px;
+}
+.row-1{
+  justify-content: flex-end;
+}
+
+.row-1 i,
+.row-2 i{
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  color: white;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* COLUMN3 */
+
+.column3-top{
+  grid-area: column3-top;
+}
+
+.column3-middle{
+  grid-area: column3-middle;
+}
+
+.column4-top{
+  grid-area: column4-top;
+}
+
+.column3-top-bg,
+.column3-middle-bg,
+.column4-top-bg{
+  width: 100%;
+  height: 100%;
+}
+
+/* RIGHT TOP */
+
+/* RIGHT TOP */
+
+.right-top{
+  grid-area: right-top;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.right-top-1,
+.right-top-2{
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.right-top i{
+  width: 45px;
+  height: 45px;
+  background: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  border-radius: 16px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.right-top i:hover{
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* RIGHT MIDDLE */
+
+.right-middle1{
+  grid-area: right-middle1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-middle1 p{
+  color: #888;
+  font-size: 14px;
+}
+
+.right-middle1 h1{
+  color: white;
+  font-size: 28px;
+  line-height: 1.35;
+  width: 90%;
+}
+
+.right-middle1 i{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #2d2d2d;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+/* TOGGLE */
+
+.right-middle2{
+  grid-area: right-middle2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-middle2::before{
+  content: "";
+  width: 90px;
+  height: 42px;
+  background: #1d1d1d;
+  border-radius: 40px;
+}
+
+.right-middle2::after{
+  content: "☾";
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 104px;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RIGHT BOTTOM */
+
+.right-bottom{
+  grid-area: right-bottom;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-bottom h3{
+  color: #8c8c8c;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.right-bottom h1{
+  color: white;
+  font-size: 46px;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+
+.right-bottom p{
+  color: #7d7d7d;
+  line-height: 1.8;
+  width: 70%;
+  font-size: 14px;
+}
+
+.right-bottom i{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #2d2d2d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+}
