@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your day efficiently</p>
+        </header>
+
+        <section class="task-form-section">
+            <form id="task-form">
+                <div class="input-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" required placeholder="What needs to be done?">
+                </div>
+                
+                <div class="input-group">
+                    <label for="task-desc">Description (optional)</label>
+                    <textarea id="task-desc" rows="2" placeholder="Add some details..."></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="task-date">Due Date</label>
+                        <input type="date" id="task-date" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="tasks-header">
+                <h2>Your Tasks</h2>
+                <div class="task-stats">
+                    <span id="total-tasks">0</span> total
+                </div>
+            </div>
+            
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be injected here by JS -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
